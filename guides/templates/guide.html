@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class='container'>
+    {% for guide in guides %}
+      <div class="guide">
+        <h2>{{guide.title}}</h2>
+        <div class="guide-image">
+          <img class="img-thumbnail" src= "{{guide.image.url}}" />
+          </div>
+          <p class="description">
+            {{ guide.description }}
+            </p>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
